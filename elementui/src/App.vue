@@ -1,46 +1,26 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <div>
-      <p>
-        If Element is successfully added to this project, you'll see an
-        <code v-text="'<el-button>'"></code>
-        below
-      </p>
-      <el-button>el-button</el-button>
-      <el-input class="input" v-model="input" type="file" placeholder="Please input" />
-      <el-button class="button" type="primary">文件处理</el-button>
-      
-    </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <el-row>
+    <el-col :span="4">
+      <el-menu :router="true" default-active="/home" class="el-menu-vertical-demo">
+        <el-menu-item index="/home">Home</el-menu-item>
+        <el-menu-item index="/settings">Settings</el-menu-item>
+      </el-menu>
+    </el-col>
+    <el-col :span="20">
+      <router-view></router-view>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+  name: 'App',
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-.input {
-  display: inline;
-  margin: 20px 30px;
-}
-.button {
-  width: 90px;
+.el-menu-vertical-demo {
+  height: 100vh;
+  border-right: 1px solid #e0e0e0;
 }
 </style>
