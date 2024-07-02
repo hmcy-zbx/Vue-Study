@@ -4,6 +4,7 @@
       <el-menu :router="true" default-active="/home" class="el-menu-vertical-demo">
         <el-menu-item index="/home">Home</el-menu-item>
         <el-menu-item index="/settings">Settings</el-menu-item>
+        <el-menu-item index="/user-information">User Information</el-menu-item>
       </el-menu>
     </el-col>
     <el-col :span="20">
@@ -15,7 +16,7 @@
 <script>
 export default {
   name: 'App',
-}
+};
 </script>
 
 <style>
