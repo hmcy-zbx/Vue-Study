@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../views/Home.vue';
 import SettingsPage from '../views/Settings.vue';
 import UserInformationPage from '../views/UserInformation.vue';
+import LoginPage from '../views/Login.vue';
 
 const routes = [
     {
@@ -20,8 +21,13 @@ const routes = [
         component: UserInformationPage
     },
     {
+        path: '/login',
+        name: 'LoginPage',
+        component: LoginPage
+    },
+    {
         path: '/',
-        redirect: '/home'
+        redirect: '/login',
     }
 ];
 
